@@ -22,7 +22,7 @@ export const portfolioItems = [
     image: '/projects/04.jpg',
     
   },
-  ...designPortfolioItems,
+  // ...designPortfolioItems,
   // {
   //   id: 1,
   //   title: 'منصة التجارة الإلكترونية',
