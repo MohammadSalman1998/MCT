@@ -1,0 +1,155 @@
+/* src\pages\Services\NetworkingService.module.css */
+@import './SoftwareService.module.css';
+
+/* Custom overrides for networking theme - Light Green & Violet */
+.software-hero {
+  background: linear-gradient(135deg, #10b981 0%, #7c3aed 100%);
+}
+
+.software-hero h1 {
+  color: white;
+}
+
+.software-hero p {
+  color: rgba(255,255,255,0.95);
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 0;
+  overflow: visible;
+  direction: ltr; /* Prevents RTL flexbox bugs */
+}
+
+.tech-icon {
+  color: rgba(255,255,255,0.9);
+  font-size: 2.5rem;
+  width: 1em;
+  height: 1em;
+  min-width: 1em;
+  min-height: 1em;
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.tech-icon:hover {
+  color: #6ee7b7;
+  filter: drop-shadow(0 0 20px rgba(110, 231, 183, 0.8));
+  transform: scale(1.3) rotate(360deg);
+}
+
+/* Network-specific color scheme */
+.section-title {
+  color: #10b981;
+}
+
+.section-title::after {
+  background: linear-gradient(90deg, #10b981, #7c3aed);
+}
+
+.software-card-icon {
+  color: #10b981;
+}
+
+.software-card:hover .software-card-icon {
+  color: #7c3aed;
+  filter: drop-shadow(0 0 25px rgba(124, 58, 237, 0.7));
+  transform: scale(1.2) rotate(360deg);
+}
+
+.software-highlight-icon {
+  color: #10b981;
+}
+
+.software-highlight:hover .software-highlight-icon {
+  color: #7c3aed;
+  filter: drop-shadow(0 0 30px rgba(124, 58, 237, 0.8));
+  transform: scale(1.3) rotate(360deg);
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #10b981 0%, #7c3aed 100%);
+}
+
+/* Floating icons with network theme */
+.floating-icon {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.rotating-icon {
+  color: #10b981;
+}
+
+.rotating-icon:hover {
+  color: #7c3aed;
+  filter: drop-shadow(0 0 25px rgba(124, 58, 237, 0.8));
+  transform: scale(1.6);
+}
+
+.rotating-icons-circle {
+  border-color: #10b981;
+}
+
+/* Network-specific animations - Light Green & Violet theme */
+@keyframes networkPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.6);
+  }
+}
+
+.software-highlight:hover {
+  animation: networkPulse 2s infinite;
+}
+
+/* Additional network-themed effects */
+.software-card::before {
+  background: linear-gradient(135deg, #10b981 0%, #7c3aed 100%);
+}
+
+.software-highlight::before {
+  background: linear-gradient(180deg, #10b981, #7c3aed);
+}
+
+/* Network-specific glow animation */
+@keyframes networkGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.7);
+  }
+}
+
+.section-title::after {
+  animation: networkGlow 3s ease-in-out infinite;
+}
+
+/* Enhanced CTA button */
+.cta-button:hover {
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.4);
+  transform: translateY(-5px) scale(1.08);
+}
+
+/* Rotating circle enhancements */
+.rotating-icons-circle {
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+  transition: all 0.3s ease;
+}
+
+.rotating-icons-circle:hover {
+  border-color: #7c3aed;
+  box-shadow: 0 0 40px rgba(124, 58, 237, 0.5);
+}

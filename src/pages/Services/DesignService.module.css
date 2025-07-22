@@ -1,0 +1,93 @@
+/* src/pages/Services/DesignService.module.css */
+@import './SoftwareService.module.css';
+
+/* Custom overrides for design theme - Pink & Blue */
+.software-hero {
+  background: linear-gradient(135deg, #ec4899 0%, #3b82f6 100%);
+}
+
+.software-hero h1 {
+  color: white;
+}
+
+.software-hero p {
+  color: rgba(255,255,255,0.95);
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 0;
+  overflow: visible;
+  direction: ltr; /* Prevents RTL flexbox bugs */
+}
+
+.tech-icon {
+  color: rgba(255,255,255,0.9);
+  font-size: 2.5rem;
+  width: 1em;
+  height: 1em;
+  min-width: 1em;
+  min-height: 1em;
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.tech-icon:hover {
+  color: #f9a8d4;
+  filter: drop-shadow(0 0 20px rgba(249, 168, 212, 0.8));
+  transform: scale(1.3) rotate(360deg);
+}
+
+/* Design-specific color scheme */
+.section-title {
+  color: #ec4899;
+}
+
+.section-title::after {
+  background: linear-gradient(90deg, #ec4899, #3b82f6);
+}
+
+.software-card-icon {
+  color: #ec4899;
+}
+
+.software-card:hover .software-card-icon {
+  color: #3b82f6;
+  filter: drop-shadow(0 0 25px rgba(59, 130, 246, 0.7));
+  transform: scale(1.2) rotate(360deg);
+}
+
+.software-highlight-icon {
+  color: #ec4899;
+}
+
+.software-highlight:hover .software-highlight-icon {
+  color: #3b82f6;
+  filter: drop-shadow(0 0 30px rgba(59, 130, 246, 0.8));
+  transform: scale(1.3) rotate(360deg);
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #ec4899 0%, #3b82f6 100%);
+}
+
+/* Floating icons with design theme */
+.floating-icon {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.portfolio-section {
+  padding: 50px 0;
+  background-color: var(--background-light);
+} 
+ 
