@@ -100,13 +100,13 @@ const SmoothCarousel = ({ images }) => {
         
         {/* Shrinking Card - The one going to left */}
         {isAnimating && (
-          <div className="absolute left-0 w-[70%] h-full card-shrink-animation z-10"> {/* تم تغيير animate-card-shrink */}
+          <div className="absolute left-0 lg:w-[30%] h-full card-shrink-animation z-10 md:w-[100%]"> {/* تم تغيير animate-card-shrink */}
             <div className="relative h-full bg-white rounded-xl overflow-hidden shadow-2xl">
               <div className="relative h-full overflow-hidden">
                 <img 
                   src={images[previousIndex].image} 
                   alt={`Previous image ${previousIndex + 1}`}
-                  className="w-full h-full object-cover "
+                  className="w-full min-h-full object-cover "
                   // Fallback for broken images
                   onError={(e) => { e.currentTarget.src = 'https://placehold.co/600x400/CCCCCC/000000?text=Image+Error'; }}
                 />
@@ -117,7 +117,7 @@ const SmoothCarousel = ({ images }) => {
         )}
 
         {/* Active Card (70% width) - Coming from right */}
-        <div className={`absolute w-[68%] h-full z-30 left-1 transition-all duration-1000 ease-out ${
+        <div className={`absolute lg:w-[69%] h-full z-30 left-0 transition-all duration-1000 ease-out md:w-[100%] ${
           isAnimating ? 'card-expand-animation' : '' // تم تغيير animate-card-expand
         }`}>
           <div className="relative h-full bg-white rounded-xl overflow-hidden shadow-2xl group">
@@ -129,7 +129,7 @@ const SmoothCarousel = ({ images }) => {
               <img 
                 src={images[currentIndex].image} 
                 alt={`Carousel image ${currentIndex + 1}`}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full min-h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 // Fallback for broken images
                 onError={(e) => { e.currentTarget.src = 'https://placehold.co/600x400/CCCCCC/000000?text=Image+Error'; }}
               />
@@ -139,7 +139,7 @@ const SmoothCarousel = ({ images }) => {
         </div>
 
         {/* Preview Card (30% width) - Will slide from right */}
-        <div className={`absolute right-1 w-[30%] h-[100%] transition-all duration-1000 ease-out ${
+        <div className={`absolute right-1 lg:w-[30%] h-[100%] transition-all duration-1000 ease-out md:w-[100%] ${
           isAnimating ? 'card-slide-in-animation' : '' // تم تغيير animate-card-slide-in
         }`}>
           <div className="relative h-full bg-white/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg opacity-60 hover:opacity-80 transition-opacity duration-300">
@@ -167,7 +167,7 @@ const SmoothCarousel = ({ images }) => {
         </button>
 
         <button
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm border-2 border-gray-200 text-gray-800 hover:bg-green-800 hover:text-white transition-all duration-300 z-20 flex items-center justify-center shadow-md"
+          className="absolute right-4 top-1/2 z-50 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm border-2 border-gray-200 text-gray-800 hover:bg-green-800 hover:text-white transition-all duration-300 z-20 flex items-center justify-center shadow-md"
           onClick={nextSlide}
           disabled={isAnimating}
         >
@@ -206,7 +206,18 @@ const SmoothCarousel = ({ images }) => {
 
 export default SmoothCarousel;
 
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
 
+
+
+
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
 
 
 // import React, { useState, useEffect } from 'react';

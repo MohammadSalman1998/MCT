@@ -3,8 +3,8 @@
 /* Keyframes for card animations */
 @keyframes card-expand {
   0% {
-    transform: scale(0.7) translateX(100%);
-    opacity: 0.6;
+    transform: scale(1) translateX(100%);
+    opacity: 1;
   }
   100% {
     transform: scale(1) translateX(0);
@@ -17,20 +17,28 @@
     transform: scale(1) translateX(0);
     opacity: 1;
   }
+  50% {
+    transform: scale(1) translateX(-50%);
+    opacity: 1;
+  }
   100% {
-    transform: scale(0.7) translateX(-100%);
-    opacity: 0.3;
+    transform: scale(1) translateX(-100%);
+    opacity: 1;
   }
 }
 
 @keyframes card-slide-in {
   0% {
-    transform: scale(0.7) translateX(100%);
-    opacity: 0.3;
+    transform: scale(1) translateX(100%);
+    opacity: 1;
+  }
+    50% {
+    transform: scale(1) translateX(50%);
+    opacity: 1;
   }
   100% {
-    transform: scale(0.7) translateX(0);
-    opacity: 0.6;
+    transform: scale(1) translateX(0);
+    opacity: 1;
   }
 }
 
