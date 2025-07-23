@@ -5,6 +5,7 @@ import PortfolioSlider from '../../components/PortfolioSlider/PortfolioSlider';
 import { portfolioItems } from '../../data/portfolioData';
 import './Portfolio.css';
 import { useLanguage } from '../../contexts/LanguageContext';
+import SmoothCarousel from '../../components/PortfolioSlider/SmoothCarousel';
 
 const Portfolio = () => {
   const { t } = useLanguage();
@@ -22,7 +23,8 @@ const Portfolio = () => {
 
         {/* Portfolio Carousel */}
         <div className="portfolio-carousel-wrapper">
-          <PortfolioSlider portfolioItems={portfolioItems} />
+          <SmoothCarousel images={portfolioItems}/>
+          {/* <PortfolioSlider portfolioItems={portfolioItems} /> */}
         </div>
       </div>
     </section>

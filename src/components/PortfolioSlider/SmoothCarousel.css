@@ -1,0 +1,53 @@
+/* SmoothCarousel.css */
+
+/* Keyframes for card animations */
+@keyframes card-expand {
+  0% {
+    transform: scale(0.7) translateX(100%);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes card-shrink {
+  0% {
+    transform: scale(1) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.7) translateX(-100%);
+    opacity: 0.3;
+  }
+}
+
+@keyframes card-slide-in {
+  0% {
+    transform: scale(0.7) translateX(100%);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.7) translateX(0);
+    opacity: 0.6;
+  }
+}
+
+/* Custom CSS classes for applying animations */
+.card-expand-animation {
+  animation: card-expand 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-shrink-animation {
+  animation: card-shrink 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-slide-in-animation {
+  animation: card-slide-in 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+
+
