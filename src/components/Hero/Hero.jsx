@@ -233,41 +233,41 @@ const Hero = () => {
         <div className="hero-content">
           {/* Logo explosion effect */}
           <div className="hero-visual">
-            <InteractiveLogoExplosion size={220} />
+            <InteractiveLogoExplosion size={300} />
           </div>
           <div className="hero-text">
-            <h1 className="hero-title" style={{position: 'relative'}}>
-  {/* Ghost block for each line to reserve max width/height */}
-  <div aria-hidden="true" style={{
-    visibility: 'hidden',
-    height: 0,
-    overflow: 'visible',
-    position: 'absolute',
-    pointerEvents: 'none',
-    zIndex: -1,
-    whiteSpace: 'pre',
-    fontWeight: 'inherit',
-    fontSize: 'inherit',
-    fontFamily: 'inherit',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'start',
-    gap: 'var(--spacing-sm)'
-  }}>
-    <span className="title-line">{[t('hero.welcome'), t('hero.company'), t('hero.subtitle')].reduce((a, b) => a.length > b.length ? a : b)}</span>
-    <span className="title-highlight">{[t('hero.welcome'), t('hero.company'), t('hero.subtitle')].reduce((a, b) => a.length > b.length ? a : b)}</span>
-    <span className="title-line">{[t('hero.welcome'), t('hero.company'), t('hero.subtitle')].reduce((a, b) => a.length > b.length ? a : b)}</span>
-  </div>
-  <SequentialTypewriter
-    texts={[t('hero.welcome'), t('hero.company'), t('hero.subtitle')]}
-    typingSpeed={70}
-    deletingSpeed={40}
-    lineDelay={400}
-    deletingLineDelay={250}
-    className="hero-typewriter-title"
-    lineClassNames={["title-line", "title-line mct-solutions", "title-line"]}
-  />
-</h1>
+            <h1 className="hero-title" style={{ position: 'relative' }}>
+              {/* Ghost block for each line to reserve max width/height */}
+              <div aria-hidden="true" style={{
+                visibility: 'hidden',
+                height: 0,
+                overflow: 'visible',
+                position: 'absolute',
+                pointerEvents: 'none',
+                zIndex: -1,
+                whiteSpace: 'pre',
+                fontWeight: 'inherit',
+                fontSize: 'inherit',
+                fontFamily: 'inherit',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'start',
+                gap: 'var(--spacing-sm)'
+              }}>
+                <span className="title-line">{[t('hero.welcome'), t('hero.company'), t('hero.subtitle')].reduce((a, b) => a.length > b.length ? a : b)}</span>
+                <span className="title-highlight">{[t('hero.welcome'), t('hero.company'), t('hero.subtitle')].reduce((a, b) => a.length > b.length ? a : b)}</span>
+                <span className="title-line">{[t('hero.welcome'), t('hero.company'), t('hero.subtitle')].reduce((a, b) => a.length > b.length ? a : b)}</span>
+              </div>
+              <SequentialTypewriter
+                texts={[t('hero.welcome'), t('hero.company'), t('hero.subtitle')]}
+                typingSpeed={70}
+                deletingSpeed={40}
+                lineDelay={400}
+                deletingLineDelay={250}
+                className="hero-typewriter-title"
+                lineClassNames={["title-line", "title-line mct-solutions", "title-line"]}
+              />
+            </h1>
 
             <p className="hero-description" data-aos="fade-left">
               {t('hero.description')}

@@ -119,7 +119,7 @@ const Home = () => {
                 <>
                   <div className="about-visual">
                     <div className="about-image-container">
-                      <img src="/logo/logo-8.png" alt="MCT Team" />
+                      <img src="/logo/logo-10.png" alt="MCT Team" />
                       <div className="about-glow"></div>
                     </div>
                     <div className="floating-features">
@@ -194,7 +194,7 @@ const Home = () => {
                   </div>
                   <div className="about-visual">
                     <div className="about-image-container">
-                      <img src="/logo/logo-8.png" alt="MCT Team" />
+                      <img src="/logo/logo-10.png" alt="MCT Team" />
                       <div className="about-glow"></div>
                     </div>
                     {/* <div className="floating-features">

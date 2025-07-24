@@ -1,7 +1,7 @@
 /* src\components\Hero\Hero.css */
 .hero-section {
   position: relative;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -283,7 +283,7 @@
   color: var(--text-primary);
   transition: color var(--transition-smooth);
   text-align: right;
-  max-width: 70%;
+  max-width: 60%;
   min-width: 320px;
   flex: 1 1 350px;
   box-sizing: border-box;
@@ -294,8 +294,8 @@
 }
 
 .hero-title {
-  font-size: 3.5rem;
-  font-weight: var(--font-weight-extrabold);
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
   line-height: 1.2;
   margin-bottom: var(--spacing-xl);
   display: flex;
@@ -303,6 +303,8 @@
   gap: var(--spacing-sm);
   color: var(--text-primary);
   transition: color var(--transition-smooth);
+  /* overflow-wrap: anywhere !important; */
+  /* border: 1px solid; */
 }
 
 .title-line {
@@ -314,7 +316,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-size: 4rem;
+  font-size: 1rem;
   text-shadow: 0 0 30px var(--shadow-primary);
   animation: gradient-shift 4s ease-in-out infinite;
   position: relative;
@@ -355,7 +357,7 @@
 }
 
 .hero-description {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   line-height: 1.6;
   margin-bottom: var(--spacing-2xl);
   color: var(--text-secondary);
@@ -478,7 +480,7 @@
   width: 20px;
   height: 20px;
   fill: currentColor;
-  transition: transform var(--transition-normal);
+  /* transition: transform var(--transition-normal); */
 }
 
 .btn-primary:hover .btn-icon,
@@ -492,7 +494,7 @@
   justify-content: center;
   min-width: 220px;
   max-width: 270px;
-  width: 30%;
+  width: 40%;
 }
 
 [dir="ltr"] .hero-visual {
@@ -565,7 +567,8 @@
   }
   .hero-title .title-line,
   .hero-title .title-line.mct-solutions {
-    font-size: 0.92rem !important;
+    font-size: 1.4rem !important;
+    line-height: 1.5;
   }
 }
 
@@ -1439,3 +1442,7 @@
     z-index: 20; /* Above text on mobile */
   }
 }
+
+
+
+

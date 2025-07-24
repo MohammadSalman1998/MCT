@@ -11,27 +11,27 @@ import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 const serviceLinks = [
   {
     path: '/services/software',
-    icon: faCode,
+    // icon: faCode,
     textKey: 'services.software.title',
   },
   {
     path: '/services/network',
-    icon: faNetworkWired,
+    // icon: faNetworkWired,
     textKey: 'services.network.title',
   },
   {
     path: '/services/security',
-    icon: faShieldAlt,
+    // icon: faShieldAlt,
     textKey: 'services.security.title',
   },
   {
     path: '/services/support',
-    icon: faTools,
+    // icon: faTools,
     textKey: 'services.support.title',
   },
   {
     path: '/services/design',
-    icon: faPalette,
+    // icon: faPalette,
     textKey: 'services.design.title',
   },
 ];
@@ -66,7 +66,7 @@ const ServicesHeader = () => {
                   <li key={link.path}>
                     <Link
                       to={link.path}
-                      className={`nav-link${location.pathname === link.path ? ' active' : ''}`}
+                      className={`nav-link ${location.pathname === link.path ? ' active' : ''}`}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <FontAwesomeIcon icon={link.icon} style={{ color: 'var(--primary-300)' }} />
@@ -97,7 +97,7 @@ const ServicesHeader = () => {
             <div className="logo-section" style={{ order: 1 }}>
               <div className="logo-container">
                 <Link to="/" className="header-logo !mt-5.5" style={{ textDecoration: 'none' }}>
-                  <div className="logo-text !text-3xl font-black">MCT</div>
+                  <div className="logo-text ">MCT</div>
                   <div className="logo-icon">
                     <img src="/logo/logo-10.png" alt="MCT Logo" className="logo-img" />
                   </div>

@@ -11,22 +11,22 @@ export default function InteractiveLogoExplosion({
   const [isReassembling, setIsReassembling] = useState(false); // هل نحن في مرحلة التجميع
 
   // عند الهوفر: أظهر الأجزاء فوراً
-  React.useEffect(() => {
-    if (hovered) {
-      setShowParts(true);
-      setIsReassembling(false);
-    } else if (showParts) {
-      // عند إزالة الهوفر: أعد التجميع أولاً
-      setIsReassembling(true);
-      // مدة التجميع = عدد الأجزاء * تأخير كل جزء + مدة الحركة
-      const total = 7 * 110 + 1700;
-      const timeout = setTimeout(() => {
-        setShowParts(false);
-        setIsReassembling(false);
-      }, total);
-      return () => clearTimeout(timeout);
-    }
-  }, [hovered]);
+  // React.useEffect(() => {
+  //   if (hovered) {
+  //     setShowParts(false);
+  //     setIsReassembling(false);
+  //   } else if (showParts) {
+  //     // عند إزالة الهوفر: أعد التجميع أولاً
+  //     setIsReassembling(true);
+  //     // مدة التجميع = عدد الأجزاء * تأخير كل جزء + مدة الحركة
+  //     const total = 7 * 110 + 1700;
+  //     const timeout = setTimeout(() => {
+  //       setShowParts(false);
+  //       setIsReassembling(false);
+  //     }, total);
+  //     return () => clearTimeout(timeout);
+  //   }
+  // }, [hovered]);
 
   return (
     <div
@@ -41,8 +41,8 @@ export default function InteractiveLogoExplosion({
         cursor: 'pointer',
         margin: '0 auto',
       }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      // onMouseEnter={() => setHovered(true)}
+      // onMouseLeave={() => setHovered(false)}
       tabIndex={0}
       aria-label="Animated company logo"
     >

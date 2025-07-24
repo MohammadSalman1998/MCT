@@ -16,9 +16,9 @@ const Portfolio = () => {
         <HeaderSection title={t('portfolio.title')} />
 
         <div className="section-description">
-          <p>
+          {/* <p>
             {t('portfolio.description')}
-          </p>
+          </p> */}
         </div>
 
         {/* Portfolio Carousel */}
