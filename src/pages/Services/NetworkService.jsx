@@ -147,7 +147,7 @@ const NetworkService = () => {
             <div className={styles['cta-title']}>
               {t('services.networking.cta')}
             </div>
-            <a href="/contact" className={styles['cta-button']}>
+            <a href="/#contact" className={styles['cta-button']}>
               {t('services.networking.ctaBtn')}
             </a>
           </section>

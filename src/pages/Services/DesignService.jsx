@@ -177,7 +177,7 @@ const DesignService = () => {
             <div className={styles['cta-title']}>
               {t('services.design.cta')}
             </div>
-            <a href="/contact" className={styles['cta-button']}>
+            <a href="/#contact" className={styles['cta-button']}>
               {t('services.design.ctaBtn')}
             </a>
           </section>
