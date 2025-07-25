@@ -288,7 +288,7 @@ const Hero = () => {
               </div>
             </div> */}
 
-            <div className="hero-buttons" data-aos="flip-up" data-aos-delay="200">
+            <div className="hero-buttons">
               <button className="btn-primary" onClick={() => {
                 const contactSection = document.getElementById('contact');
                 if (contactSection) {

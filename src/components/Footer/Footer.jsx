@@ -72,36 +72,51 @@ const Footer = () => {
           {/* Services */}
           <div className="footer-section">
             <h3 className="footer-title">{t('footer.ourServices')}</h3>
-            <ul className="footer-links">
+            <ul className="footer-links ">
               <li>
-                <a href="/services/software" className="footer-link">
-                  <FontAwesomeIcon icon={faCode} className="footer-link-icon" />
+                {/* <a href="/services/software" className="footer-link"> */}
+
+                <div className="footer-link">
+                  <FontAwesomeIcon icon={faCode} className="footer-link-icon " />
                   {t('services.software.title')}
-                </a>
+                  </div>
+                {/* </a> */}
               </li>
               <li>
-                <a href="/services/network" className="footer-link">
+                {/* <a href="/services/network" className="footer-link"> */}
+                <div className="footer-link">
+
                   <FontAwesomeIcon icon={faNetworkWired} className="footer-link-icon" />
                   {t('services.network.title')}
-                </a>
+                </div>
+                {/* </a> */}
               </li>
               <li>
-                <a href="/services/security" className="footer-link">
-                  <FontAwesomeIcon icon={faShieldAlt} className="footer-link-icon" />
+                {/* <a href="/services/security" className="footer-link"> */}
+                <div className="footer-link">
+
+                  <FontAwesomeIcon icon={faShieldAlt} className="footer-link-icon " />
                   {t('services.security.title')}
-                </a>
+                </div>
+                {/* </a> */}
               </li>
               <li>
-                <a href="/services/support" className="footer-link">
-                  <FontAwesomeIcon icon={faTools} className="footer-link-icon" />
+                {/* <a href="/services/support" className="footer-link"> */}
+                <div className="footer-link">
+
+                  <FontAwesomeIcon icon={faTools} className="footer-link-icon " />
                   {t('services.support.title')}
-                </a>
+                </div>
+                {/* </a> */}
               </li>
               <li>
-                <a href="/services/design" className="footer-link">
-                  <FontAwesomeIcon icon={faPalette} className="footer-link-icon" />
+                {/* <a href="/services/design" className="footer-link"> */}
+                <div className="footer-link !text-[15px]">
+
+                  <FontAwesomeIcon icon={faPalette} className="footer-link-icon " />
                   {t('services.design.title')}
-                </a>
+                </div>
+                {/* </a> */}
               </li>
             </ul>
           </div>

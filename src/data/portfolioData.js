@@ -4,7 +4,7 @@ import { designPortfolioItems } from './designPortfolioData';
 export const portfolioItems = [
   {
     id:1,
-    image: '/projects/01.jpg',
+    image: '/design/02.jpeg',
     
   },
   {

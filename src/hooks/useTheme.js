@@ -34,9 +34,9 @@ export const useTheme = () => {
     document.documentElement.style.setProperty('--theme-transition', 'all 0.3s ease');
 
     // Force a repaint
-    document.body.style.display = 'none';
-    document.body.offsetHeight; // Trigger reflow
-    document.body.style.display = '';
+    // document.body.style.display = 'none';
+    // document.body.offsetHeight; 
+    // document.body.style.display = '';
   };
 
   return { isDark, toggleTheme };
