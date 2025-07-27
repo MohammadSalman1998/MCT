@@ -15,11 +15,11 @@ const Portfolio = () => {
       <div className="container">
         <HeaderSection title={t('portfolio.title')} />
 
-        <div className="section-description">
-          {/* <p>
+        {/* <div className="section-description">
+          <p>
             {t('portfolio.description')}
-          </p> */}
-        </div>
+          </p>
+        </div> */}
 
         {/* Portfolio Carousel */}
         <div className="portfolio-carousel-wrapper">

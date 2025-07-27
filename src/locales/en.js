@@ -231,7 +231,7 @@ export const en = {
           desc: "Custom network design that fits your business needs and scale"
         },
         implementation: {
-          title: "Implementation & Installation",
+          title: "Design & Implementation",
           desc: "Installation of necessary hardware and software"
         },
         datacenter: {
@@ -413,12 +413,18 @@ export const en = {
     form: {
       name: "Name",
       email: "Email",
+      phoneNO: "phone number",
       subject: "Subject",
       message: "Message",
       send: "Send Message",
       sending: "Sending...",
       successSend: "Email sent successfully",
-      errorSend: "Failed to send email"
+      errorSend: "Failed to send email",
+      invalidEmail: "Please send a valid email.",
+      emailSubject: `New message from`,
+      emailBodyIntro: "the topic",
+      openingGmail: "Opening Gmail...",
+      redirecting: "Transferring..."
     }
   },
 

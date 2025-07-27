@@ -231,7 +231,7 @@ export const ar = {
           desc: "تصميم شبكات مخصصة تتناسب مع احتياج وحجم أعمالكم"
         },
         implementation: {
-          title: "تنفيذ وتركيب",
+          title: "تصميم وتنفيذ",
           desc: "تركيب الأجهزة والبرمجيات اللازمة"
         },
         datacenter: {
@@ -413,12 +413,18 @@ export const ar = {
     form: {
       name: "الاسم",
       email: "البريد الإلكتروني",
+      phoneNO: "رقم الجوال",
       subject: "الموضوع",
       message: "الرسالة",
       send: "إرسال الرسالة",
       sending: "جار الإرسال...",
       successSend: "تم إرسال الإيميل بنجاح",
-      errorSend: "فشل إرسال الإيميل"
+      errorSend: "فشل إرسال الإيميل",
+      invalidEmail:"يرجى إدخال بريد إلكتروني صحيح",
+      emailSubject:  `رسالة جديدة من`,
+      emailBodyIntro: "الموضوع",
+      openingGmail:"جاري فتح Gmail...",
+      redirecting:"جاري التحويل..."
     }
   },
 

@@ -25,7 +25,18 @@ function App() {
 
   return (
     <LanguageProvider>
-      <ToastContainer position="top-center" autoClose={4000} />
+        <ToastContainer
+        position="top-right" // أو أي موقع تفضله
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={true} // مهم للغة العربية
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored" // أو "light" أو "dark" حسب الثيم الخاص بك
+      />
       <BrowserRouter>
         <div className="App">
           <Routes>

@@ -64,31 +64,32 @@ export default function SequentialTypewriter({
         setActiveLine(texts.length - 1);
       }, 800);
       return () => clearTimeout(timeout);
-    } else if (phase === 'deleting') {
-      if (charCounts[activeLine] > 0) {
-        // احذف حرف من السطر الحالي
-        const timeout = setTimeout(() => {
-          setCharCounts(counts => {
-            const next = [...counts];
-            next[activeLine]--;
-            return next;
-          });
-        }, deletingSpeed);
-        return () => clearTimeout(timeout);
-      } else if (activeLine > 0) {
-        // انتقل للسطر الأعلى
-        const timeout = setTimeout(() => setActiveLine(l => l - 1), deletingLineDelay);
-        return () => clearTimeout(timeout);
-      } else {
-        // انتهى الحذف
-        const timeout = setTimeout(() => {
-          setPhase('typing');
-          setCharCounts(Array(texts.length).fill(0));
-          setActiveLine(0);
-        }, 600);
-        return () => clearTimeout(timeout);
-      }
-    }
+    } 
+    // else if (phase === 'deleting') {
+    //   if (charCounts[activeLine] > 0) {
+    //     // احذف حرف من السطر الحالي
+    //     const timeout = setTimeout(() => {
+    //       setCharCounts(counts => {
+    //         const next = [...counts];
+    //         next[activeLine]--;
+    //         return next;
+    //       });
+    //     }, deletingSpeed);
+    //     return () => clearTimeout(timeout);
+    //   } else if (activeLine > 0) {
+    //     // انتقل للسطر الأعلى
+    //     const timeout = setTimeout(() => setActiveLine(l => l - 1), deletingLineDelay);
+    //     return () => clearTimeout(timeout);
+    //   } else {
+    //     // انتهى الحذف
+    //     const timeout = setTimeout(() => {
+    //       setPhase('typing');
+    //       setCharCounts(Array(texts.length).fill(0));
+    //       setActiveLine(0);
+    //     }, 600);
+    //     return () => clearTimeout(timeout);
+    //   }
+    // }
   }, [phase, charCounts, activeLine, texts, typingSpeed, lineDelay, deletingSpeed, deletingLineDelay]);
 
   return (

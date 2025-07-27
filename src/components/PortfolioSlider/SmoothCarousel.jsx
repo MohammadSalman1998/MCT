@@ -379,7 +379,7 @@ const SmoothCarousel = ({images}) => {
   return (
     <>
       <style>{carouselStyles}</style>
-      <div className="relative w-full  mx-auto h-[500px] bg-gradient-to-br from-blue-50/5 to-blue-100/10 rounded-2xl shadow-xl">
+      <div className="relative w-full  mx-auto h-[65vh] bg-gradient-to-br from-blue-50/5 to-blue-100/10 rounded-2xl shadow-xl">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-50/5 via-transparent to-purple-50/5"></div>
