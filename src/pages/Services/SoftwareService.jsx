@@ -140,7 +140,7 @@ const SoftwareService = () => {
             <h2 className={styles['section-title']}>{t('services.software.whyUs')}</h2>
             <div className={styles['software-highlights']}>
               {highlights.map((item, idx) => (
-                <div className={`${styles['software-highlight']} ${styles['animate-fade-in-left']}`} key={idx}>
+                <div className={`${styles['software-highlight']} ${styles['']}`} key={idx}>
                   {item.icon}
                   <div className={styles['software-highlight-content']}>
                     <div className={styles['software-highlight-title']}>{t(`services.software.highlights.${item.key}.title`)}</div>

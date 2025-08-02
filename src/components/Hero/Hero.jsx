@@ -1,11 +1,11 @@
 // src\components\Hero\Hero.jsx
 import React, { useEffect, useState, useRef } from 'react';
-import './Hero.css';
 import LogoPartsExplosion from './LogoPartsExplosion';
 import InteractiveLogoExplosion from './InteractiveLogoExplosion';
 import { useLanguage } from '../../contexts/LanguageContext';
 import SequentialTypewriter from './SequentialTypewriter';
 import LogoParts from './LogoParts'; // استورد LogoParts
+import './Hero.css';
 
 
 // import SimpleLanyard from './SimpleLanyard.jsx';
@@ -131,108 +131,24 @@ const Interactive3DTechScene = () => {
   );
 };
 
-// Simple Ripple Background Component
-const RippleBackground = () => {
-  const [ripples, setRipples] = React.useState([]);
-  const containerRef = React.useRef(null);
-
-  // Handle click to create ripple
-  React.useEffect(() => {
-    const handleMouseClick = (e) => {
-      if (containerRef.current) {
-        const rect = containerRef.current.getBoundingClientRect();
-        const newRipple = {
-          id: Date.now(),
-          x: ((e.clientX - rect.left) / rect.width) * 100,
-          y: ((e.clientY - rect.top) / rect.height) * 100
-        };
-        setRipples(prev => [...prev, newRipple]);
-
-        // Remove ripple after animation
-        setTimeout(() => {
-          setRipples(prev => prev.filter(ripple => ripple.id !== newRipple.id));
-        }, 1500);
-      }
-    };
-
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener('click', handleMouseClick);
-    }
-
-    return () => {
-      if (container) {
-        container.removeEventListener('click', handleMouseClick);
-      }
-    };
-  }, []);
-
-  return (
-    <div ref={containerRef} className="ripple-background">
-      {/* Simple Wave Pattern */}
-      <div className="wave-pattern">
-        <div className="wave wave-1"></div>
-        <div className="wave wave-2"></div>
-        <div className="wave wave-3"></div>
-      </div>
-
-      {/* Click Ripples */}
-      <div className="dynamic-ripples">
-        {ripples.map(ripple => (
-          <div
-            key={ripple.id}
-            className="click-ripple"
-            style={{
-              left: `${ripple.x}%`,
-              top: `${ripple.y}%`
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Simple Floating Particles */}
-      <div className="simple-particles">
-        {Array.from({ length: 15 }).map((_, i) => (
-          <div
-            key={`particle-${i}`}
-            className="simple-particle"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`
-            }}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
-
 const Hero = () => {
   const { t } = useLanguage();
   return (
-    <section className="hero-section" id='hero'>
-      <div className="hero-background">
-        <RippleBackground />
-
-        <div className="hero-overlay"></div>
-        <div className="hero-particles ">
-          {[...Array(50)].map((_, i) => (
-            <div key={i} className="particle" style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${3 + Math.random() * 2}s`
-            }}></div>
-          ))}
-        </div>
-      </div>
-
-
-
+    <section className="hero-section" id="hero">
       <div className="hero-container">
         <div className="hero-content">
           {/* Logo explosion effect */}
           <div className="hero-visual">
+            {/* <div className="logo border ">
+              <img src="partsOfLogo/01.png" alt="" className="p01" />
+              <img src="partsOfLogo/02.png" alt="" className="p02" />
+              <img src="partsOfLogo/03.png" alt="" className="p03" />
+              <img src="partsOfLogo/04.png" alt="" className="p04" />
+              <img src="partsOfLogo/05.png" alt="" className="p05" />
+              <img src="partsOfLogo/06.png" alt="" className="p06" />
+              <img src="partsOfLogo/07.png" alt="" className="p07" />
+            </div> */}
+
             <InteractiveLogoExplosion size={300} />
           </div>
           <div className="hero-text">

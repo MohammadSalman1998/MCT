@@ -1,7 +1,11 @@
 /* src\pages\Home\Home.css */
 .home-page {
   min-height: 100vh;
-  background: var(--bg-primary);
+  background-color: var(--bg-primary);
+  background-image: radial-gradient(ellipse at top, rgba(79, 209, 199, 0.1) 0%, transparent 50%),
+                    radial-gradient(ellipse at bottom right, rgba(247, 166, 0, 0.08) 0%, transparent 50%);
+  background-attachment: fixed;
+  background-size: cover;
   transition: background var(--transition-smooth);
 }
 
@@ -77,22 +81,10 @@
 /* Services Section */
 .services-section {
   padding: 120px 0;
-  background: var(--bg-secondary);
+  background-color: transparent;
   position: relative;
   overflow: hidden;
   transition: background var(--transition-smooth);
-}
-
-.services-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 20% 80%, rgba(79, 209, 199, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(247, 166, 0, 0.08) 0%, transparent 50%);
-  z-index: 1;
 }
 
 .services-section .container {
@@ -241,23 +233,12 @@
 /* About Section */
 .about-section {
   padding: 120px 0;
-  background: var(--bg-primary);
   position: relative;
   overflow: hidden;
   transition: background var(--transition-smooth);
 }
 
-.about-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 80% 20%, rgba(247, 166, 0, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 20% 80%, rgba(79, 209, 199, 0.08) 0%, transparent 50%);
-  z-index: 1;
-}
+
 
 .about-section .container {
   position: relative;
@@ -695,13 +676,13 @@
 /* Contact Section */
 .contact-section {
   padding: 120px 0;
-  background: var(--bg-secondary);
+  background-color: transparent;
   position: relative;
   overflow: hidden;
   transition: background var(--transition-smooth);
 }
 
-.contact-section::before {
+/* .contact-section::before {
   content: '';
   position: absolute;
   top: 0;
@@ -711,7 +692,7 @@
   background: radial-gradient(circle at 30% 70%, rgba(79, 209, 199, 0.1) 0%, transparent 50%),
               radial-gradient(circle at 70% 30%, rgba(247, 166, 0, 0.08) 0%, transparent 50%);
   z-index: 1;
-}
+} */
 
 .contact-section .container {
   position: relative;

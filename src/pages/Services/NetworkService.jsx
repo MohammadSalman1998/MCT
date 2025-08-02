@@ -129,7 +129,7 @@ const NetworkService = () => {
             <h2 className={styles['section-title']}>{t('services.networking.whyUs')}</h2>
             <div className={styles['software-highlights']}>
               {highlights.map((item, idx) => (
-                <div className={`${styles['software-highlight']} ${styles['animate-fade-in-left']}`} key={idx}>
+                <div className={`${styles['software-highlight']} ${styles['']}`} key={idx}>
                   {item.icon}
                   <div className={styles['software-highlight-content']}>
                     <div className={styles['software-highlight-title']}>{t(`services.networking.highlights.${item.key}.title`)}</div>

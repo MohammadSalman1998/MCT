@@ -746,3 +746,7 @@
 [data-theme="light"] .header .logo-text, [data-theme="light"] .header .logo-text1 {
   color: #3C3C3B;
 }
+
+.backHome{
+  background: var(--bg-gradient-accent) !important;
+}

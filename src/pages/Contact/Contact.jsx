@@ -52,7 +52,7 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-              <ContactForm />
+              {/* <ContactForm /> */}
             </div>
           </div>
         </section>

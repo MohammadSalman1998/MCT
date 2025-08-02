@@ -1,5 +1,6 @@
 // src\locales\en.js
 export const en = {
+  backHome:"Back Home",
   nav: {
     home: "Home",
     services: "Services",
@@ -247,7 +248,7 @@ export const en = {
           desc: "Technical support services to ensure business continuity"
         },
         wireless: {
-          title: "Internal Wireless Networks",
+          title: "Indoor and outdoor wireless networks",
           desc: "High-performance WiFi networks for offices and institutions"
         }
       },

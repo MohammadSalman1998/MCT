@@ -214,6 +214,7 @@ import React, { useState, useEffect } from 'react';
 
 // Inline CSS for animations
 const carouselStyles = `
+
 /* Keyframes for card animations */
 @keyframes card-expand-from-preview {
     0% {
@@ -336,6 +337,8 @@ const SmoothCarousel = ({images}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [previousIndex, setPreviousIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
 
   // Function to move to the next slide
   const nextSlide = () => {
@@ -364,14 +367,15 @@ const SmoothCarousel = ({images}) => {
   }, [isAnimating, currentIndex]);
 
   // Auto-play functionality
-  useEffect(() => {
+    useEffect(() => {
     const interval = setInterval(() => {
-      if (!isAnimating) {
+        if (!isAnimating && !isHovered) {
         nextSlide();
-      }
+        }
     }, 4000);
     return () => clearInterval(interval);
-  }, [isAnimating, currentIndex]);
+    }, [isAnimating, currentIndex, isHovered]);
+
 
   // Helper to get the index of the next image for the preview card
   const getNextIndex = () => (currentIndex + 1) % images.length;
@@ -379,7 +383,10 @@ const SmoothCarousel = ({images}) => {
   return (
     <>
       <style>{carouselStyles}</style>
-      <div className="relative w-full  mx-auto h-[65vh] bg-gradient-to-br from-blue-50/5 to-blue-100/10 rounded-2xl shadow-xl">
+      <div className="relative w-full !bg-transparent  mx-auto h-[65vh] rounded-2xl shadow-xl"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-50/5 via-transparent to-purple-50/5"></div>

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useLocation } from 'react-router-dom';
-import { faNetworkWired, faShieldAlt, faCode, faTools, faMoon, faSun, faPalette } from '@fortawesome/free-solid-svg-icons';
+import { faNetworkWired, faShieldAlt, faCode, faTools, faMoon, faSun, faPalette, faHomeAlt } from '@fortawesome/free-solid-svg-icons';
 import { useTheme } from '../../hooks/useTheme';
 import { useLanguage } from '../../contexts/LanguageContext';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
@@ -121,7 +121,10 @@ const ServicesHeader = () => {
               </ul>
             </nav>
             <div className="header-right" style={{ order: 3 }}>
-              <LanguageSwitcher className="header-lang-switcher" />
+              <Link to={'/'} className='header-lang-switcher theme-toggle'>
+                <FontAwesomeIcon icon={faHomeAlt} style={{ color: 'var(--primary-300)' }} />
+              </Link>
+              {/* <LanguageSwitcher className="header-lang-switcher" /> */}
               <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle dark/light mode">
                 <FontAwesomeIcon icon={isDark ? faSun : faMoon} style={{ color: 'var(--primary-300)' }} />
               </button>
@@ -139,6 +142,7 @@ const ServicesHeader = () => {
         )}
       </div>
       {isMenuOpen && <div className="sidebar-overlay" onClick={toggleMenu}></div>}
+      
       <nav className={`sidebar-menu${isMenuOpen ? ' open' : ''}`}>
         <ul>
           {serviceLinks.map(link => (
@@ -154,7 +158,11 @@ const ServicesHeader = () => {
             </li>
           ))}
           <li style={{ textAlign: 'center', margin: '20px 0' }}>
-            <LanguageSwitcher />
+            {/* <LanguageSwitcher /> */}
+            <Link to={'/'} className='backHome'>
+            {t('backHome')}
+                {/* <FontAwesomeIcon icon={faHomeAlt} style={{ color: 'var(--primary-300)' }} /> */}
+            </Link>
           </li>
         </ul>
       </nav>

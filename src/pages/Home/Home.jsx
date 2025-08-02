@@ -13,7 +13,7 @@ import { faCode, faMobileAlt, faShieldAlt, faNetworkWired, faMapMarkerAlt, faPho
 import ContactForm from '../../components/ContactForm/ContactForm';
 import Portfolio from '../Portfolio/Portfolio';
 import { useLanguage } from '../../contexts/LanguageContext';
-
+import AnimatedBackground from '../../components/AnimatedBackground/AnimatedBackground';
 
 const Home = () => {
   const location = useLocation();
@@ -25,7 +25,7 @@ const Home = () => {
   useEffect(() => {
     // Scroll to hash if present on location change
     if (location.hash) {
-      const id = location.hash.replace('#','');
+      const id = location.hash.replace('#', '');
       const el = document.getElementById(id);
       if (el) {
         setTimeout(() => {
@@ -39,19 +39,20 @@ const Home = () => {
   const isArabic = lang === 'ar';
   return (
     <div className="home-page">
+      <AnimatedBackground />
       <Header />
       <main className="main-content">
-        <div data-aos="fade-up">
+        <div >
           <Hero />
         </div>
 
         {/* Portfolio Section */}
-        <section id="portfolio" data-aos="fade-up">
+        <section id="portfolio" >
           <Portfolio />
         </section>
 
         {/* Services Section */}
-        <section className="services-section" id="services" data-aos="fade-up">
+        <section className="services-section" id="services">
           <div className="container">
             <HeaderSection title={t('services.title')} />
 
@@ -60,7 +61,7 @@ const Home = () => {
                 {t('services.description')}
               </p>
             </div>
-            
+
             <div className="services-grid">
               {[
                 {
@@ -88,31 +89,31 @@ const Home = () => {
                   navigate(`/services/${service.key}`);
                 };
                 return (
-  <button
-    type="button"
-    className="service-card"
-    key={service.key}
-    data-aos={['fade-right','fade-up','fade-left','zoom-in'][idx % 4]}
-    data-aos-delay={idx * 100}
-    onClick={handleDetails}
-    tabIndex={0}
-    aria-label={t(`services.${service.key}.title`)}
-  >
-    <div className="service-icon">
-      <FontAwesomeIcon icon={service.icon} style={{ color: 'var(--primary-300)' }} size="2x" />
-    </div>
-    <h3 className="service-title">{t(`services.${service.key}.title`)}</h3>
-    <p className="service-description">{t(`services.${service.key}.description`)}</p>
-  </button>
-);
+                  <button
+                    type="button"
+                    className="service-card"
+                    key={service.key}
+                    data-aos={['fade-right', 'fade-up', 'fade-left', 'zoom-in'][idx % 4]}
+                    data-aos-delay={idx * 100}
+                    onClick={handleDetails}
+                    tabIndex={0}
+                    aria-label={t(`services.${service.key}.title`)}
+                  >
+                    <div className="service-icon">
+                      <FontAwesomeIcon icon={service.icon} style={{ color: 'var(--primary-300)' }} size="2x" />
+                    </div>
+                    <h3 className="service-title">{t(`services.${service.key}.title`)}</h3>
+                    <p className="service-description">{t(`services.${service.key}.description`)}</p>
+                  </button>
+                );
               })}
 
             </div>
           </div>
         </section>
-        
+
         {/* About Section */}
-        <section className="about-section" id="about" data-aos="fade-up">
+        <section className="about-section" id="about" >
           <div className="container">
             <div className="about-content about-content-centered">
               {isArabic ? (
@@ -231,7 +232,7 @@ const Home = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="contact-section" id="contact" data-aos="fade-up">
+        <section className="contact-section" id="contact" >
           <div className="container">
             <HeaderSection title={t('contact.title')} />
 
@@ -240,7 +241,7 @@ const Home = () => {
                 {t('contact.description')}
               </p>
             </div>
-            
+
             <div className="contact-content">
               <div className="contact-info">
                 <div className="contact-item">
@@ -252,35 +253,39 @@ const Home = () => {
                     <p>{t('contact.addressValue')}</p>
                   </div>
                 </div>
-                
-                <div className="contact-item" data-aos="flip-up" data-aos-delay="100">
-                  <div className="contact-icon">
-                    <FontAwesomeIcon icon={faPhoneAlt} style={{ color: 'var(--color-primary)' }} size="lg" />
+
+                <a href="https://wa.me/+963951721454" target="_blank" rel="noopener noreferrer">
+                  <div className="contact-item" data-aos="flip-up" data-aos-delay="100">
+                    <div className="contact-icon">
+                      <FontAwesomeIcon icon={faPhoneAlt} style={{ color: 'var(--color-primary)' }} size="lg" />
+                    </div>
+                    <div className="contact-details ">
+                      <h4>{t('contact.phone')}</h4>
+                      <p dir="ltr" style={{ direction: 'ltr', unicodeBidi: 'isolate' }}>+963 951 721 454</p>
+                    </div>
                   </div>
-                  <div className="contact-details ">
-                    <h4>{t('contact.phone')}</h4>
-                    <p dir="ltr" style={{direction: 'ltr', unicodeBidi: 'isolate'}}>+963 951 721 454</p>
-                  </div>
-                </div>
-                
+                </a>
+
                 <div className="contact-item" data-aos="zoom-in-left" data-aos-delay="200">
                   <div className="contact-icon">
                     <FontAwesomeIcon icon={faEnvelope} style={{ color: 'var(--color-primary)' }} size="lg" />
                   </div>
                   <div className="contact-details">
                     <h4>{t('contact.email')}</h4>
-                    <p>info@m4ct.com</p>
-                    <p>support@m4ct.com</p>
+                    <a href="mailto:info@m4ct.com" className='footer-email-link'><p>info@m4ct.com</p></a>
+                    <a href="mailto:support@m4ct.com" className='footer-email-link'><p>support@m4ct.com</p></a>
+                    {/* <p>info@m4ct.com</p> */}
+                    {/* <p>support@m4ct.com</p> */}
                   </div>
                 </div>
               </div>
-              
-              <ContactForm />
+
+              {/* <ContactForm /> */}
             </div>
           </div>
         </section>
 
-        
+
       </main>
       <Footer />
     </div>

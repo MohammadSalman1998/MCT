@@ -14,6 +14,7 @@ import {
   faTools,
   faPalette
 } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -30,7 +31,7 @@ const Footer = () => {
           <div className="footer-section">
             <Link to="/" className="footer-logo" style={{ textDecoration: 'none' }}>
               <span className="footer-logo-text !text-3xl font-black">MCT</span>
-              <img src="/logo/logo-10.png" alt="MCT Logo"  className="footer-logo-img" />
+              <img src="/logo/logo-10.png" alt="MCT Logo" className="footer-logo-img" />
             </Link>
             <p className="footer-description">
               {t('footer.description')}
@@ -74,49 +75,49 @@ const Footer = () => {
             <h3 className="footer-title">{t('footer.ourServices')}</h3>
             <ul className="footer-links ">
               <li>
-                {/* <a href="/services/software" className="footer-link"> */}
+                <Link to="/services/software" className="">
 
                 <div className="footer-link">
                   <FontAwesomeIcon icon={faCode} className="footer-link-icon " />
                   {t('services.software.title')}
-                  </div>
-                {/* </a> */}
+                </div>
+                </Link>
               </li>
               <li>
-                {/* <a href="/services/network" className="footer-link"> */}
+                <Link to="/services/network" className="">
                 <div className="footer-link">
 
                   <FontAwesomeIcon icon={faNetworkWired} className="footer-link-icon" />
                   {t('services.network.title')}
                 </div>
-                {/* </a> */}
+                </Link>
               </li>
               <li>
-                {/* <a href="/services/security" className="footer-link"> */}
+                <Link to="/services/security" className="">
                 <div className="footer-link">
 
                   <FontAwesomeIcon icon={faShieldAlt} className="footer-link-icon " />
                   {t('services.security.title')}
                 </div>
-                {/* </a> */}
+                </Link>
               </li>
               <li>
-                {/* <a href="/services/support" className="footer-link"> */}
-                <div className="footer-link">
+                <Link to="/services/support" className="">
+                <div className="footer-link ">
 
                   <FontAwesomeIcon icon={faTools} className="footer-link-icon " />
                   {t('services.support.title')}
                 </div>
-                {/* </a> */}
+                </Link>
               </li>
               <li>
-                {/* <a href="/services/design" className="footer-link"> */}
+                <Link to="/services/design" className="">
                 <div className="footer-link !text-[15px]">
 
                   <FontAwesomeIcon icon={faPalette} className="footer-link-icon " />
                   {t('services.design.title')}
                 </div>
-                {/* </a> */}
+                </Link>
               </li>
             </ul>
           </div>
@@ -125,25 +126,54 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-title">{t('footer.contactInfo')}</h3>
             <div className="contact-info">
-              <div className="contact-item">
+              <div className="footer-link">
                 <div className="contact-icon">
                   <FontAwesomeIcon icon={faMapMarkerAlt} />
                 </div>
                 <span>{t('footer.damascusSyria')}</span>
               </div>
-              <div className="contact-item">
-                <div className="contact-icon">
-                  <FontAwesomeIcon icon={faPhoneAlt} />
+              {/* <div className="footer-link"> */}
+              <a href="https://wa.me/+963951721454" target="_blank" rel="noopener noreferrer" className="footer-link">
+                {/* <div > */}
+                <div className='contact-icon'>
+                  <FontAwesomeIcon icon={faWhatsapp} />
                 </div>
-                <span dir="ltr" className="footer-phone-ltr">+963 951 721 454</span>
-              </div>
-              <div className="contact-item">
+
+                {/* <div>
+                      <FontAwesomeIcon icon={faPhoneAlt} />
+                    </div> */}
+                {/* </div> */}
+                <span dir="ltr">+963 951 721 454</span>
+              </a>
+
+
+              {/* إضافة رابط WhatsApp */}
+              {/* <a href="https://wa.me/963951721454" target="_blank" rel="noopener noreferrer" className="footer-link"> 
+                  <div className="contact-icon">
+                    <FontAwesomeIcon icon={faWhatsapp} />
+                  </div>
+                  <span dir="ltr">+963 951 721 454</span> 
+                </a> */}
+
+
+              {/* <div className="contact-icon"> */}
+              {/* <FontAwesomeIcon icon={faPhoneAlt} /> */}
+              {/* </div> */}
+              {/* <span dir="ltr" className="footer-phone-ltr">+963 951 721 454</span> */}
+              {/* </div> */}
+              {/* <div className="footer-link"> */}
+              <div className='footer-link !flex'>
                 <div className="contact-icon">
                   <FontAwesomeIcon icon={faEnvelope} />
                 </div>
-                <span>info@m4ct.com <br /> support@m4ct.com</span>
-                {/* <span></span> */}
+                <div className='flex flex-col'>
+                  <a href="mailto:info@m4ct.com" className='footer-email-link'>info@m4ct.com</a>
+                  <a href="mailto:support@m4ct.com" className='footer-email-link'>support@m4ct.com</a>
+                </div>
               </div>
+              {/* <span>info@m4ct.com  support@m4ct.com</span> */}
+              {/* <span></span> */}
+              {/* </div> */}
             </div>
           </div>
         </div>
@@ -174,7 +204,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <p className="copyright">
-              © 2025 MCT. Mujadedoon for Creative Technology <br /> {t('footer.rights')}
+              © 2025 MCT. Mujadedoon for Creative Technology  {t('footer.rights')}
             </p>
             {/* <div className="footer-bottom-links">
               <a href="#privacy" className="footer-bottom-link">{t('footer.privacyPolicy')}</a>

@@ -6,7 +6,8 @@
   max-width: 100%;
   height: 500px;
   border-radius: var(--radius-xl);
-  background: transparent;
+  background: transparent !important;
+  box-shadow: none !important;
   overflow: visible;
   overflow-x: hidden;
   padding: 0;
@@ -57,10 +58,10 @@
 
 .portfolio-slider.card-stack-carousel {
   overflow: visible;
-  background: transparent;
+  background: transparent !important;
   border: none;
-  box-shadow: none;
-  backdrop-filter: none;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
 }
 
 .slider-container {
@@ -205,7 +206,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: var(--bg-secondary);
+  background: transparent !important;
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-xl);
   display: flex;
@@ -220,7 +221,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-secondary);
+  background: transparent !important;
   overflow: hidden;
 }
 
@@ -250,19 +251,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    45deg,
-    var(--bg-primary) 0%,
-    rgba(var(--bg-primary-rgb), 0.8) 50%,
-    var(--primary-500-alpha) 100%
-  );
+  background: transparent !important;
   display: flex;
   align-items: flex-end;
   padding: var(--spacing-xl);
   opacity: 0;
   transition: all 0.5s ease;
   border-radius: var(--radius-xl);
-  backdrop-filter: blur(var(--blur-md));
+  backdrop-filter: none !important;
 }
 
 /* Remove backdrop blur from active card overlay */
